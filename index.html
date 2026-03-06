@@ -11,7 +11,6 @@
 
     body {
       background-color: #f2ebd9; 
-      /* Cafe Background Texture */
       background-image: 
         radial-gradient(#e6dab3 1px, transparent 1px),
         linear-gradient(rgba(166, 124, 82, 0.05) 1px, transparent 1px);
@@ -20,10 +19,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       font-family: 'Lato', sans-serif;
       color: #3e2723;
-      padding: 60px 20px;
+      padding: 80px 15px 40px 15px;
       position: relative;
       overflow-x: hidden;
     }
@@ -37,55 +36,31 @@
       height: 100%;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.12; /* Increased opacity for better visibility */
-      /* Enhanced SVG with more thematic icons: Cups, Hearts, Bubbles, Boundaries */
-      background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233e2723' fill-opacity='1' fill-rule='evenodd'%3E%3C!-- Coffee Cup --%3E%3Cpath d='M40 60h30v20c0 8-7 15-15 15s-15-7-15-15V60zm30 5h5c3 0 5 2 5 5s-2 5-5 5h-5v-10z' fill='none' stroke='%233e2723' stroke-width='2'/%3E%3Cpath d='M45 50c0-5 2-5 2-10m6 10c0-5 2-5 2-10m6 10c0-5 2-5 2-10' stroke='%233e2723' stroke-width='1.5'/%3E%3C!-- Consent Bubbles --%3E%3Ctext x='130' y='50' font-family='Arial' font-weight='bold' font-size='14'%3EYES%3C/text%3E%3Ccircle cx='145' cy='45' r='25' fill='none' stroke='%233e2723' stroke-width='1.5' stroke-dasharray='4 2'/%3E%3Ctext x='20' y='160' font-family='Arial' font-weight='bold' font-size='14'%3ENO%3C/text%3E%3Crect x='10' y='142' width='40' height='25' rx='5' fill='none' stroke='%233e2723' stroke-width='2'/%3E%3C!-- Boundary Lines --%3E%3Cpath d='M110 120l40 40m0-40l-40 40' stroke='%233e2723' stroke-width='1' opacity='0.5'/%3E%3Cpath d='M100 140h60' stroke='%233e2723' stroke-width='3' stroke-linecap='round'/%3E%3C!-- Hearts/Respect --%3E%3Cpath d='M170 160c-3-3-8-3-11 0-3-3-8-3-11 0 0 5 11 15 11 15s11-10 11-15z'/%3E%3Cpath d='M90 20c-2-2-5-2-7 0-2-2-5-2-7 0 0 3 7 10 7 10s7-7 7-10z'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.12; 
+      background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233e2723' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M40 60h30v20c0 8-7 15-15 15s-15-7-15-15V60zm30 5h5c3 0 5 2 5 5s-2 5-5 5h-5v-10z' fill='none' stroke='%233e2723' stroke-width='2'/%3E%3Cpath d='M45 50c0-5 2-5 2-10m6 10c0-5 2-5 2-10m6 10c0-5 2-5 2-10' stroke='%233e2723' stroke-width='1.5'/%3E%3Ctext x='130' y='50' font-family='Arial' font-weight='bold' font-size='14'%3EYES%3C/text%3E%3Ccircle cx='145' cy='45' r='25' fill='none' stroke='%233e2723' stroke-width='1.5' stroke-dasharray='4 2'/%3E%3Ctext x='20' y='160' font-family='Arial' font-weight='bold' font-size='14'%3ENO%3C/text%3E%3Crect x='10' y='142' width='40' height='25' rx='5' fill='none' stroke='%233e2723' stroke-width='2'/%3E%3Cpath d='M110 120l40 40m0-40l-40 40' stroke='%233e2723' stroke-width='1' opacity='0.5'/%3E%3Cpath d='M100 140h60' stroke='%233e2723' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M170 160c-3-3-8-3-11 0-3-3-8-3-11 0 0 5 11 15 11 15s11-10 11-15z'/%3E%3Cpath d='M90 20c-2-2-5-2-7 0-2-2-5-2-7 0 0 3 7 10 7 10s7-7 7-10z'/%3E%3C/g%3E%3C/svg%3E");
     }
 
-    /* CAFE AWNING */
     .awning {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 40px;
-      background: repeating-linear-gradient(
-        90deg,
-        #bf360c,
-        #bf360c 40px,
-        #d84315 40px,
-        #d84315 80px
-      );
+      top: 0; left: 0; width: 100%; height: 40px;
+      background: repeating-linear-gradient(90deg, #bf360c, #bf360c 40px, #d84315 40px, #d84315 80px);
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      z-index: 5;
+      z-index: 20;
     }
     .awning::after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: 0;
-      width: 100%;
-      height: 15px;
+      content: ''; position: absolute; bottom: -15px; left: 0; width: 100%; height: 15px;
       background: radial-gradient(circle at 10px 0, #bf360c 12px, transparent 13px);
       background-size: 20px 20px;
     }
 
-    /* SUN MOTES */
     .rain {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      overflow: hidden;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 1; overflow: hidden;
     }
     .raindrop {
-      position: absolute;
-      top: -20px;
-      width: 4px;
-      height: 4px !important;
-      border-radius: 50%;
-      background: rgba(212, 163, 115, 0.3);
+      position: absolute; top: -20px; width: 4px; height: 4px !important;
+      border-radius: 50%; background: rgba(212, 163, 115, 0.3);
       animation: floatDust linear infinite;
     }
     @keyframes floatDust {
@@ -95,369 +70,143 @@
       100% { transform: translateY(105vh) translateX(30px); opacity: 0; }
     }
 
-    /* HANGING CAFE LAMP */
     .street-light {
-      position: fixed;
-      top: 0; right: 10%;
-      width: 2px;
-      height: 40%;
-      background: #4e342e;
-      z-index: 6;
+      position: fixed; top: 0; right: 10%; width: 2px; height: 35%;
+      background: #4e342e; z-index: 15;
     }
     .street-light::after {
-      content: '';
-      position: absolute;
-      bottom: -20px; left: -24px;
-      width: 50px; height: 25px;
-      background: #d4a373;
-      border-radius: 40px 40px 5px 5px;
-      border: 2px solid #4e342e;
-    }
-    .street-light-glow {
-      position: fixed;
-      top: 38%;
-      right: calc(10% - 75px);
-      width: 150px; height: 150px;
-      background: radial-gradient(circle, rgba(255, 223, 137, 0.4) 0%, transparent 70%);
-      z-index: 1;
-      pointer-events: none;
+      content: ''; position: absolute; bottom: -20px; left: -24px;
+      width: 50px; height: 25px; background: #d4a373;
+      border-radius: 40px 40px 5px 5px; border: 2px solid #4e342e;
     }
 
-    /* MAIN WRAPPER */
     .cafe-wrapper {
       position: relative;
-      z-index: 2;
+      z-index: 10;
       width: 100%;
       max-width: 700px;
-      margin-top: 20px;
     }
 
-    /* CAFÉ SIGN */
-    .cafe-sign {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-    .cafe-sign .coffee-icon {
-      font-size: 2rem;
-      margin-bottom: 5px;
-      display: block;
-      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
-    }
+    .cafe-sign { text-align: center; margin-bottom: 25px; }
+    .cafe-sign .coffee-icon { font-size: 2rem; margin-bottom: 5px; display: block; }
     .cafe-sign h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-size: clamp(2rem, 8vw, 3rem);
       color: #4e342e;
       letter-spacing: 2px;
       text-shadow: 2px 2px 0px rgba(255,255,255,0.8);
       margin-bottom: 10px;
     }
-    .partner-links {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .partner-links { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
     .partner-btn {
-      text-decoration: none;
-      font-size: 0.75rem;
-      color: #6d4c41;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: 6px 14px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid #d7ccc8;
-      border-radius: 20px;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .partner-btn span {
-      font-weight: 400;
-      color: #8d6e63;
-      text-transform: none;
-      margin-left: 2px;
-    }
-    .partner-btn:hover {
-      background: #bf360c;
-      color: #fff;
-      border-color: #bf360c;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(191, 54, 12, 0.2);
-    }
-    .partner-btn:hover span {
-      color: rgba(255,255,255,0.8);
+      text-decoration: none; font-size: 0.75rem; color: #6d4c41;
+      padding: 6px 14px; background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #d7ccc8; border-radius: 20px;
+      font-weight: 700; text-transform: uppercase;
     }
 
-    /* WINDOW FRAME */
     .window-frame {
       background: #faf6f0;
-      border: 10px solid #8c5a35;
+      border: clamp(5px, 2vw, 10px) solid #8c5a35;
       border-radius: 4px;
-      padding: 40px;
-      box-shadow:
-        0 30px 60px rgba(62, 39, 35, 0.2),
-        inset 0 0 40px rgba(0,0,0,0.02);
+      padding: clamp(15px, 5vw, 40px);
+      box-shadow: 0 20px 40px rgba(62, 39, 35, 0.15);
       position: relative;
     }
 
-    /* CLOSED SIGN */
-    .closed-sign {
-      text-align: center;
-      margin-bottom: 30px;
-      position: relative;
-      z-index: 11;
+    .closed-sign { text-align: center; margin-bottom: 30px; }
+    .sign-tag {
+      display: inline-block; background: #bf360c; color: #fffaf0;
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(1.2rem, 5vw, 1.8rem);
+      padding: 10px 20px; border-radius: 2px;
+      transform: rotate(-3deg); border: 1px solid #3e2723;
     }
-    .closed-sign .sign-tag {
-      display: inline-block;
-      background: #bf360c;
-      color: #fffaf0;
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 1.8rem;
-      padding: 10px 30px;
-      border-radius: 2px;
-      box-shadow: 3px 3px 0px #3e2723;
-      transform: rotate(-3deg);
-      border: 1px solid #3e2723;
-    }
-    .closed-sign .sign-sub {
-      display: block;
-      font-family: 'Lato', sans-serif;
-      font-style: normal;
-      font-size: 0.75rem;
-      color: #ffccbc;
-      margin-top: 6px;
-      letter-spacing: 1px;
-    }
+    .sign-sub { display: block; font-family: 'Lato', sans-serif; font-style: normal; font-size: 0.75rem; color: #ffccbc; margin-top: 6px; }
 
-    /* CHALKBOARD */
     .chalkboard {
-      background: #1b2e20;
-      border: 8px solid #5d4037;
-      border-radius: 4px;
-      padding: 20px;
-      margin-bottom: 30px;
-      text-align: center;
-      position: relative;
-      z-index: 11;
+      background: #1b2e20; border: 6px solid #5d4037; border-radius: 4px;
+      padding: 15px; margin-bottom: 30px; text-align: center;
       box-shadow: inset 0 4px 20px rgba(0,0,0,0.5);
     }
-    .chalkboard .chalk-label {
-      font-size: 0.75rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #a8c6af;
-      margin-bottom: 10px;
-      opacity: 0.8;
-    }
-    .chalkboard .chalk-days {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: #f5f2e6;
-    }
-    .chalkboard .chalk-message {
-      font-size: 0.95rem;
-      color: #d1e2d6;
-      margin-top: 8px;
-      font-style: italic;
-      font-family: 'Playfair Display', serif;
-    }
+    .chalk-label { font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: #a8c6af; margin-bottom: 5px; opacity: 0.8; }
+    .chalk-days { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #f5f2e6; }
+    .chalk-message { font-size: 0.9rem; color: #d1e2d6; margin-top: 5px; font-style: italic; font-family: 'Playfair Display', serif; }
 
-    /* MENU BOARD */
     .menu-board {
-      background: #fdfaf5;
-      border: 1px solid #e0cbb0;
-      padding: 25px;
+      background: #fdfaf5; border: 1px solid #e0cbb0; padding: clamp(15px, 4vw, 25px);
       margin-bottom: 35px;
-      position: relative;
-      z-index: 11;
     }
     .menu-board h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      color: #6d4c41;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #e0cbb0;
-      padding-bottom: 12px;
+      font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #6d4c41;
+      letter-spacing: 5px; text-transform: uppercase; text-align: center;
+      margin-bottom: 20px; border-bottom: 2px solid #e0cbb0; padding-bottom: 12px;
     }
     .menu-item {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 12px 0;
+      flex-direction: column; /* Stacked by default for small screens */
+      padding: 15px 0;
       border-bottom: 1px dotted #d7ccc8;
-      gap: 15px;
     }
-    .menu-item:last-child { border-bottom: none; }
+    @media (min-width: 640px) {
+      .menu-item { flex-direction: row; justify-content: space-between; gap: 20px; }
+    }
     .menu-item-left { flex: 1; }
-    .menu-item-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: #bf360c;
-      font-weight: 700;
-    }
-    .menu-item-desc {
-      font-size: 0.85rem;
-      color: #795548;
-      margin-top: 5px;
-      line-height: 1.6;
-    }
-    .menu-item-status {
-      font-size: 0.75rem;
-      color: #388e3c;
-      font-weight: 700;
-      font-style: italic;
-      padding-top: 4px;
-    }
+    .menu-item-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #bf360c; font-weight: 700; }
+    .menu-item-desc { font-size: 0.85rem; color: #795548; margin-top: 5px; line-height: 1.6; }
+    .menu-item-status { font-size: 0.75rem; color: #388e3c; font-weight: 700; font-style: italic; padding-top: 8px; }
 
-    /* SEED POTS */
+    /* Windowsill & Pots adaptability */
     .windowsill {
       display: flex;
-      justify-content: space-around;
-      gap: 20px;
-      position: relative;
-      z-index: 11;
+      flex-direction: column; /* Vertical for mobile */
+      gap: 30px;
+      align-items: center;
+    }
+    @media (min-width: 600px) {
+      .windowsill { flex-direction: row; justify-content: space-around; gap: 15px; }
     }
     .seed-pot {
-      flex: 1;
-      text-align: center;
-      cursor: pointer;
+      flex: 1; text-align: center; cursor: pointer;
       transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      width: 100%;
+      max-width: 200px;
     }
     .seed-pot:hover { transform: translateY(-8px) scale(1.05); }
-    .pot-visual {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 8px;
-    }
+    .pot-visual { position: relative; display: inline-block; margin-bottom: 8px; }
     .pot-body {
-      width: 60px; height: 48px;
-      background: linear-gradient(160deg, #d87040, #a84b24);
-      border-radius: 2px 2px 10px 10px;
-      margin: 0 auto;
-      position: relative;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      border: 1px solid #9e3d17;
+      width: 60px; height: 48px; background: linear-gradient(160deg, #d87040, #a84b24);
+      border-radius: 2px 2px 10px 10px; margin: 0 auto; border: 1px solid #9e3d17;
     }
     .pot-body::before {
-      content: '';
-      position: absolute;
-      top: -4px; left: -4px; right: -4px;
-      height: 8px;
-      background: #e67e4d;
-      border-radius: 1px;
-      border: 1px solid #b8542b;
+      content: ''; position: absolute; top: -4px; left: -4px; right: -4px;
+      height: 8px; background: #e67e4d; border-radius: 1px; border: 1px solid #b8542b;
     }
-    .pot-soil {
-      position: absolute;
-      top: 6px; left: 6px; right: 6px;
-      height: 12px;
-      background: #3e2723;
-      border-radius: 1px;
-    }
-    .sprout {
-      position: absolute;
-      top: -24px; left: 50%; transform: translateX(-50%);
-      font-size: 1.5rem;
-      animation: sway 4s ease-in-out infinite;
-      transform-origin: bottom center;
-    }
+    .pot-soil { position: absolute; top: 6px; left: 6px; right: 6px; height: 12px; background: #3e2723; }
+    .sprout { position: absolute; top: -24px; left: 50%; transform: translateX(-50%); font-size: 1.5rem; animation: sway 4s ease-in-out infinite; }
     @keyframes sway {
       0%, 100% { transform: translateX(-50%) rotate(-4deg); }
       50% { transform: translateX(-50%) rotate(4deg); }
     }
-    .pot-city {
-      font-size: 0.7rem;
-      color: #8d6e63;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-    .pot-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: #4e342e;
-      margin-top: 2px;
-    }
-    .pot-hint {
-      font-size: 0.65rem;
-      color: #a1887f;
-      margin-top: 3px;
-      font-style: italic;
-    }
+    .pot-city { font-size: 0.7rem; color: #8d6e63; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; }
+    .pot-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #4e342e; margin-top: 2px; }
+    .pot-hint { font-size: 0.65rem; color: #a1887f; margin-top: 3px; font-style: italic; }
 
     /* MODAL */
     .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(46, 30, 26, 0.9);
-      z-index: 100;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(46, 30, 26, 0.9); z-index: 100; align-items: center; justify-content: center; padding: 20px;
     }
     .modal-overlay.active { display: flex; }
-    .modal-card {
-      background: #fffcf8;
-      border-radius: 4px;
-      padding: 40px;
-      max-width: 500px;
-      width: 100%;
-      position: relative;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-    }
-    .modal-city {
-      font-size: 0.8rem;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #8d6e63;
-      margin-bottom: 5px;
-      font-weight: 700;
-    }
-    .modal-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: #bf360c;
-      margin-bottom: 10px;
-    }
-    .modal-planted {
-      font-size: 0.8rem;
-      color: #6d4c41;
-      font-style: italic;
-      margin-bottom: 20px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #e0cbb0;
-    }
-    .modal-text {
-      font-size: 1rem;
-      color: #4e342e;
-      line-height: 1.8;
-    }
-    .modal-close {
-      position: absolute;
-      top: 20px; right: 20px;
-      background: none;
-      border: none;
-      color: #a1887f;
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
+    .modal-card { background: #fffcf8; border-radius: 4px; padding: clamp(20px, 8vw, 40px); max-width: 500px; width: 100%; position: relative; }
+    .modal-city { font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; color: #8d6e63; margin-bottom: 5px; font-weight: 700; }
+    .modal-name { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #bf360c; margin-bottom: 10px; }
+    .modal-planted { font-size: 0.8rem; color: #6d4c41; font-style: italic; margin-bottom: 20px; border-bottom: 1px solid #e0cbb0; padding-bottom: 10px; }
+    .modal-text { font-size: 1rem; color: #4e342e; line-height: 1.8; }
+    .modal-close { position: absolute; top: 15px; right: 15px; background: none; border: none; color: #a1887f; font-size: 1.8rem; cursor: pointer; }
 
     /* FOOTER */
-    .footer-note {
-      text-align: center;
-      margin-top: 45px;
-      font-size: 0.85rem;
-      color: #6d4c41;
-      position: relative;
-      z-index: 2;
-    }
-
+    .footer-note { text-align: center; margin-top: 45px; font-size: 0.85rem; color: #6d4c41; position: relative; z-index: 2; }
   </style>
 </head>
 <body>
@@ -466,10 +215,8 @@
 <div class="wallpaper-overlay"></div>
 <div class="rain" id="rain"></div>
 <div class="street-light"></div>
-<div class="street-light-glow"></div>
 
 <div class="cafe-wrapper">
-
   <div class="cafe-sign">
     <span class="coffee-icon">☕</span>
     <h1>Boundary Café</h1>
@@ -480,7 +227,6 @@
   </div>
 
   <div class="window-frame">
-
     <div class="closed-sign">
       <span class="sign-tag">
         Closed for the Season
@@ -528,11 +274,9 @@
         </div>
         <div class="menu-item-status">Planning 🗺️</div>
       </div>
-
     </div>
 
     <div class="windowsill">
-
       <div class="seed-pot" onclick="openModal('ivana')">
         <div class="pot-visual">
           <span class="sprout">🌾</span>
@@ -562,9 +306,7 @@
         <div class="pot-name">Borjan</div>
         <div class="pot-hint">tap to open</div>
       </div>
-
     </div>
-
   </div>
 
   <div class="footer-note">
@@ -573,10 +315,8 @@
       A collaborative venture between TILIA (Croatia) and EKOLiTiKA (North Macedonia)
     </div>
   </div>
-
 </div>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modal" onclick="closeModalOutside(event)">
   <div class="modal-card">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -588,9 +328,8 @@
 </div>
 
 <script>
-  // ── RAIN / DUST MOTES ─────────────────────────────
   const rain = document.getElementById('rain');
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 30; i++) {
     const drop = document.createElement('div');
     drop.classList.add('raindrop');
     drop.style.left = Math.random() * 100 + 'vw';
@@ -599,26 +338,20 @@
     rain.appendChild(drop);
   }
 
-  // ── CHALKBOARD COUNTER ────────────────────────────
   const submissionDate = new Date('2026-03-05');
-
   function updateChalkboard() {
     const today = new Date();
     const diff = Math.floor((today - submissionDate) / (1000 * 60 * 60 * 24));
-    document.getElementById('dayCount').textContent =
-      diff + (diff === 1 ? ' day' : ' days');
-
+    document.getElementById('dayCount').textContent = diff + (diff === 1 ? ' day' : ' days');
     let msg;
-    if (diff <= 7)        msg = 'The coffee is still fresh.';
-    else if (diff <= 30)  msg = 'Waiting for the first sprout.';
-    else if (diff <= 60)  msg = 'Patience is an artisanal skill.';
-    else                  msg = 'Good things take time to brew.';
-
+    if (diff <= 7) msg = 'The coffee is still fresh.';
+    else if (diff <= 30) msg = 'Waiting for the first sprout.';
+    else if (diff <= 60) msg = 'Patience is an artisanal skill.';
+    else msg = 'Good things take time to brew.';
     document.getElementById('chalkMessage').textContent = msg;
   }
   updateChalkboard();
 
-  // ── PARTNER DATA ──────────────────────────────────
   const partners = {
     borjan: {
       city: 'EKOLiTiKA',
@@ -648,14 +381,8 @@
     document.getElementById('modal-text').textContent = p.text;
     document.getElementById('modal').classList.add('active');
   }
-
-  function closeModal() {
-    document.getElementById('modal').classList.remove('active');
-  }
-
-  function closeModalOutside(e) {
-    if (e.target.id === 'modal') closeModal();
-  }
+  function closeModal() { document.getElementById('modal').classList.remove('active'); }
+  function closeModalOutside(e) { if (e.target.id === 'modal') closeModal(); }
 </script>
 </body>
 </html>
