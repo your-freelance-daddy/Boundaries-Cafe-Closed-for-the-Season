@@ -72,13 +72,15 @@
 
     .street-light {
       position: fixed; top: 0; right: 10%; width: 2px; height: 35%;
-      background: #4e342e; z-index: 15;
-    }
+  background: #4e342e; z-index: 2;    }
     .street-light::after {
       content: ''; position: absolute; bottom: -20px; left: -24px;
       width: 50px; height: 25px; background: #d4a373;
       border-radius: 40px 40px 5px 5px; border: 2px solid #4e342e;
     }
+      @media (max-width: 700px) {
+    .street-light { display: none; }
+  }
 
     .cafe-wrapper {
       position: relative;
