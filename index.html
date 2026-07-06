@@ -72,15 +72,16 @@
 
     .street-light {
       position: fixed; top: 0; right: 10%; width: 2px; height: 35%;
-  background: #4e342e; z-index: 2;    }
+      background: #4e342e; z-index: 2;
+    }
     .street-light::after {
       content: ''; position: absolute; bottom: -20px; left: -24px;
       width: 50px; height: 25px; background: #d4a373;
       border-radius: 40px 40px 5px 5px; border: 2px solid #4e342e;
     }
-      @media (max-width: 700px) {
-    .street-light { display: none; }
-  }
+    @media (max-width: 700px) {
+      .street-light { display: none; }
+    }
 
     .cafe-wrapper {
       position: relative;
@@ -124,16 +125,39 @@
       padding: 10px 20px; border-radius: 2px;
       transform: rotate(-3deg); border: 1px solid #3e2723;
     }
-    .sign-sub { display: block; font-family: 'Lato', sans-serif; font-style: normal; font-size: 0.75rem; color: #ffccbc; margin-top: 6px; }
+    .sign-sub {
+      display: block; font-family: 'Lato', sans-serif; font-style: normal;
+      font-size: 0.75rem; color: #ffccbc; margin-top: 6px;
+    }
 
     .chalkboard {
       background: #1b2e20; border: 6px solid #5d4037; border-radius: 4px;
       padding: 15px; margin-bottom: 30px; text-align: center;
       box-shadow: inset 0 4px 20px rgba(0,0,0,0.5);
     }
-    .chalk-label { font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: #a8c6af; margin-bottom: 5px; opacity: 0.8; }
-    .chalk-days { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #f5f2e6; }
-    .chalk-message { font-size: 0.9rem; color: #d1e2d6; margin-top: 5px; font-style: italic; font-family: 'Playfair Display', serif; }
+    .chalk-label {
+      font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+      color: #a8c6af; margin-bottom: 5px; opacity: 0.8;
+    }
+    .chalk-days {
+      font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #f5f2e6;
+    }
+    .chalk-message {
+      font-size: 0.9rem; color: #d1e2d6; margin-top: 5px;
+      font-style: italic; font-family: 'Playfair Display', serif;
+    }
+    .chalk-result {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(245, 242, 230, 0.25);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #cfe0d3;
+    }
+    .chalk-result strong {
+      color: #f5f2e6;
+      font-weight: 700;
+    }
 
     .menu-board {
       background: #fdfaf5; border: 1px solid #e0cbb0; padding: clamp(15px, 4vw, 25px);
@@ -146,7 +170,7 @@
     }
     .menu-item {
       display: flex;
-      flex-direction: column; /* Stacked by default for small screens */
+      flex-direction: column;
       padding: 15px 0;
       border-bottom: 1px dotted #d7ccc8;
     }
@@ -158,10 +182,9 @@
     .menu-item-desc { font-size: 0.85rem; color: #795548; margin-top: 5px; line-height: 1.6; }
     .menu-item-status { font-size: 0.75rem; color: #388e3c; font-weight: 700; font-style: italic; padding-top: 8px; }
 
-    /* Windowsill & Pots adaptability */
     .windowsill {
       display: flex;
-      flex-direction: column; /* Vertical for mobile */
+      flex-direction: column;
       gap: 30px;
       align-items: center;
     }
@@ -194,20 +217,21 @@
     .pot-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #4e342e; margin-top: 2px; }
     .pot-hint { font-size: 0.65rem; color: #a1887f; margin-top: 3px; font-style: italic; }
 
-    /* MODAL */
     .modal-overlay {
       display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(46, 30, 26, 0.9); z-index: 100; align-items: center; justify-content: center; padding: 20px;
     }
     .modal-overlay.active { display: flex; }
-    .modal-card { background: #fffcf8; border-radius: 4px; padding: clamp(20px, 8vw, 40px); max-width: 500px; width: 100%; position: relative; }
+    .modal-card {
+      background: #fffcf8; border-radius: 4px; padding: clamp(20px, 8vw, 40px);
+      max-width: 500px; width: 100%; position: relative;
+    }
     .modal-city { font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; color: #8d6e63; margin-bottom: 5px; font-weight: 700; }
     .modal-name { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #bf360c; margin-bottom: 10px; }
     .modal-planted { font-size: 0.8rem; color: #6d4c41; font-style: italic; margin-bottom: 20px; border-bottom: 1px solid #e0cbb0; padding-bottom: 10px; }
     .modal-text { font-size: 1rem; color: #4e342e; line-height: 1.8; }
     .modal-close { position: absolute; top: 15px; right: 15px; background: none; border: none; color: #a1887f; font-size: 1.8rem; cursor: pointer; }
 
-    /* FOOTER */
     .footer-note { text-align: center; margin-top: 45px; font-size: 0.85rem; color: #6d4c41; position: relative; z-index: 2; }
   </style>
 </head>
@@ -223,8 +247,8 @@
     <span class="coffee-icon">☕</span>
     <h1>Boundaries Café</h1>
     <div class="partner-links">
-      <a href="https://udruga-tilia.hr/" target="_blank" class="partner-btn">TILIA <span>(Lipik)</span></a>
-      <a href="https://ekolitika.framer.website/" target="_blank" class="partner-btn">EKOLiTiKA <span>(Skopje)</span></a>
+      <a href="https://udruga-tilia.hr/" target="_blank" rel="noopener noreferrer" class="partner-btn">TILIA <span>(Lipik)</span></a>
+      <a href="https://ekolitika.framer.website/" target="_blank" rel="noopener noreferrer" class="partner-btn">EKOLiTiKA <span>(Skopje)</span></a>
     </div>
   </div>
 
@@ -237,9 +261,13 @@
     </div>
 
     <div class="chalkboard">
-      <div class="chalk-label">Days since submission</div>
+      <div class="chalk-label">Days we waited</div>
       <div class="chalk-days" id="dayCount">–</div>
       <div class="chalk-message" id="chalkMessage"></div>
+      <div class="chalk-result">
+        <strong>Result:</strong> Not approved this round.<br>
+        We’ll reopen with a stronger recipe.
+      </div>
     </div>
 
     <div class="menu-board">
@@ -341,16 +369,12 @@
   }
 
   const submissionDate = new Date('2026-03-05');
+  const resultDate = new Date('2026-06-30');
+
   function updateChalkboard() {
-    const today = new Date();
-    const diff = Math.floor((today - submissionDate) / (1000 * 60 * 60 * 24));
+    const diff = Math.floor((resultDate - submissionDate) / (1000 * 60 * 60 * 24));
     document.getElementById('dayCount').textContent = diff + (diff === 1 ? ' day' : ' days');
-    let msg;
-    if (diff <= 7) msg = 'The coffee is still fresh.';
-    else if (diff <= 30) msg = 'Waiting for the first sprout.';
-    else if (diff <= 60) msg = 'Patience is an artisanal skill.';
-    else msg = 'Good things take time to brew.';
-    document.getElementById('chalkMessage').textContent = msg;
+    document.getElementById('chalkMessage').textContent = 'The wait ended. The café stays closed for now.';
   }
   updateChalkboard();
 
@@ -383,8 +407,14 @@
     document.getElementById('modal-text').textContent = p.text;
     document.getElementById('modal').classList.add('active');
   }
-  function closeModal() { document.getElementById('modal').classList.remove('active'); }
-  function closeModalOutside(e) { if (e.target.id === 'modal') closeModal(); }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('active');
+  }
+
+  function closeModalOutside(e) {
+    if (e.target.id === 'modal') closeModal();
+  }
 </script>
 </body>
 </html>
